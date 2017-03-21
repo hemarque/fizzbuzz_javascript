@@ -1,7 +1,7 @@
 'use strict';
 
 var fizzbuzz = function(number){
-	return number;
+	return number%3==0?'Fizz':number;
 }
 
 var assert = require('assert');
@@ -13,5 +13,7 @@ describe('FizzBuzz kata', function(){
 	it('should return 2 when 2', function(){
 		assert.equal(2, fizzbuzz(2));
 	});
-
+	it('should return Fizz when 3', function(){
+		assert.equal(fizzbuzz(3), 'Fizz');
+	});
 });
