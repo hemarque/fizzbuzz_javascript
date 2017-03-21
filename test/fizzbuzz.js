@@ -1,6 +1,8 @@
-/**
- * http://usejsdoc.org/
- */
+'use strict';
+
+var fizzbuzz = function(number){
+	return 1;
+}
 
 var assert = require('assert');
 
