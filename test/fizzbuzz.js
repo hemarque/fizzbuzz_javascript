@@ -1,7 +1,17 @@
 'use strict';
 
+
+
 var fizzbuzz = function(number){
-	return number%3==0?'Fizz':number;
+	if (isFizz(number)){
+		return 'Fizz';
+	}else{
+		return number;
+	}
+}
+
+var isFizz = function(number){
+	return number%3==0;
 }
 
 var assert = require('assert');
