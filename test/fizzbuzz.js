@@ -1,7 +1,7 @@
 'use strict';
 
 var fizzbuzz = function(number){
-	if(isFizz(number) && isBuzz(number)){
+	if(isFizzBuzz(number)){
 		return 'FizzBuzz';
 	}
 	
@@ -20,6 +20,10 @@ var isFizz = function(number){
 
 var isBuzz = function(number){
 	return number%5==0;
+}
+
+var isFizzBuzz = function(number){
+	return isFizz(number) && isBuzz(number);
 }
 
 var assert = require('assert');
