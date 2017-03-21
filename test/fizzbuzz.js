@@ -1,13 +1,15 @@
 'use strict';
 
-
-
 var fizzbuzz = function(number){
 	if (isFizz(number)){
 		return 'Fizz';
-	}else{
-		return number;
 	}
+	
+	if(number%5==0){
+		return 'Buzz';
+	}
+	
+	return number;
 }
 
 var isFizz = function(number){
@@ -25,5 +27,8 @@ describe('FizzBuzz kata', function(){
 	});
 	it('should return Fizz when 3', function(){
 		assert.equal(fizzbuzz(3), 'Fizz');
+	});
+	it('should return Buzz when 5', function(){
+		assert.equal(fizzbuzz(5), 'Buzz');
 	});
 });
